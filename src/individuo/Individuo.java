@@ -5,17 +5,21 @@ package individuo;
  * @author David
  */
 public class Individuo {
-    String dni, nombre;
-    int fechaNacimiento, poblacion;
+    private String dni, nombre;
+    private int fechaNacimiento;
+    private static int poblacion; //static para que pueda ir cambiando 
     
-    public Individuo(){} //Metodo Constructor 1
+    public Individuo(){} //Fin Metodo Constructor 1
     
     public Individuo(String dni,String nombre, int fechaNacimiento){
+        super(); //Primera linea del metodo constructor que invoque a la clase superior que comparta el mismo tipo de parametrizacion
         this.dni = dni;
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
-    }//Metodo Constructor 2
+        poblacion++; //Se asume que partira de valor 0
+    }//Fin Metodo Constructor 2
     
+    //Metodos GET y SET
     public void setDni (String dni){
         this.dni = dni;
     }
@@ -36,4 +40,4 @@ public class Individuo {
         return fechaNacimiento;
     }
 
-}
+}//Fin class
