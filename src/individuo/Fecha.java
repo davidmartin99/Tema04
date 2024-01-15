@@ -85,15 +85,15 @@ public class Fecha {
     
     //Metodo que modifica la fecha actual y la cambia por el dia siguiente
     public void diaSiguiente(){
-        if(!fechaCorrecta()){
+        if(!fechaCorrecta()){ // exclamación ! para poner lo contrario un not
             dia=1;
             mes++;
+            if (!fechaCorrecta()){
+                mes=1;
+                año++;
+            }//Fin if
         }
-        else if (dia==31 && mes==12){
-            dia=1;
-            mes=1;
-            año++;
-        }else{
+        else{
             dia++;
         }//Fin if-else
     }//fin metodo diaSiguiente
