@@ -10,10 +10,13 @@ public class main {
     
     public static void main(String[] args) {
         //Creacion de Objetos
-        Radio FM = new Radio(80,80,108);
-        Radio AM = new Radio(80,80,108);
+        Radio radioFM = new Radio(80);
+        Radio radioAM = new Radio(80);
         Scanner teclado = new Scanner(System.in);
+        
+        //LLamamos a la clase menu
         Menu menuPrincipal = new Menu();
+        
         int opcion;
         
         do{
@@ -23,16 +26,16 @@ public class main {
                 case 1:
                     System.out.print("Introduce una frecuencia: ");
                     double frecuencia = teclado.nextDouble();
-                    FM.setFrecuencia(frecuencia);
+                    radioFM.setFrecuencia(frecuencia);
                     break;
                 case 2:
-                    FM.subirFrecuencia();
+                    radioFM.subirFrecuencia();
                     break;
                 case 3: 
-                    FM.bajarFrecuencia();
+                    radioFM.bajarFrecuencia();
                     break;
                 case 4:
-                    FM.mostrarDatos();
+                    radioFM.mostrarDatos();
                     break;
                 case 5:
                     System.out.println("--- Exit... ---");

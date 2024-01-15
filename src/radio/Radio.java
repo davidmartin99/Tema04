@@ -16,10 +16,8 @@ public class Radio {
     //Metodos Constructores
     public Radio(){} //Fin Metodo Constructor 1
     
-    public Radio(double frecuencia, int frecuenciaMin, int frecuenciaMax){
+    public Radio(double frecuencia){
         this.frecuencia = frecuencia;
-        frecuenciaMin = frecuenciaMin;
-        frecuenciaMax = frecuenciaMax;
     }//Fin Metodo Constructor 2
     
     //Metodos SET Y GET
@@ -33,14 +31,7 @@ public class Radio {
     public double getFrecuencia(){
         return frecuencia;
     }
-    public int getFrecuenciaMin(){
-        return frecuenciaMin;
-    }
-    public int getFrecuenciaMax(){
-        return frecuenciaMax;
-    }
-    
-    
+
     //Metodos Especificos de la Clase
     public void subirFrecuencia(){
         frecuencia = frecuencia + variacion;
