@@ -4,6 +4,8 @@ package individuo;
  *
  * @author david
  */
+import java.util.Scanner;
+
 public class main {
     public static void main(String[] args){
         //Creacion de Objetos
@@ -43,5 +45,30 @@ public class main {
         
         Alejandro.subidaSueldo(3.1);
         System.out.println("El nuevo sueldo de "+Alejandro.getNombre()+ " es: "+Alejandro.getSueldo());
+        
+        //FECHA
+        System.out.println("-----------------------");
+        int d,m,a;
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Introduce el dia: ");
+        d = teclado.nextInt();
+        System.out.print("Introduce el mes: ");
+        m = teclado.nextInt();
+        System.out.print("Introduce el año: ");
+        a = teclado.nextInt();
+        
+        //Creamos un objeto fecha1
+        Fecha fecha1 = new Fecha(d,m,a);
+        
+        if (fecha1.fechaCorrecta()){
+            System.out.println("La fecha: "+fecha1.getDia()+"-"+fecha1.getMes()+"-"+fecha1.getAño()+". Es Correcta");
+            
+            fecha1.diaSiguiente();
+            System.out.println("Dia Siguiente: "+fecha1.getDia() + "-" + fecha1.getMes() + "-" + fecha1.getAño());
+        }
+        else{
+            System.out.println("Fecha No valida.");
+        }//Fin if-else
     }
 }
