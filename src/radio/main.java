@@ -26,11 +26,7 @@ public class main {
                 case 1:
                     System.out.print("Introduce una frecuencia: ");
                     double frecuencia = teclado.nextDouble();
-<<<<<<< HEAD
                     radioFM.setFrecuencia(frecuencia); //Importante! para que la frecuencia se cambie por la introducida
-=======
-                    radioFM.setFrecuencia(frecuencia);
->>>>>>> origin/master
                     break;
                 case 2:
                     radioFM.subirFrecuencia();

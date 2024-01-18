@@ -11,6 +11,7 @@ package radioDigital;
 public class RadioDigital {
     private static class Emisora {
         
+        //Atributos
         private String nombre;
         private double frecuencia;
         
@@ -38,6 +39,10 @@ public class RadioDigital {
         }
         
         //Metodos específicos de la clase
+        /**
+         * Muestra el estado del objeto
+         * @return 
+         */
         @Override
         public String toString() { //Nos muestra por pantalla los parámetros nombre y frecuencia
             return nombre + " _ "+ frecuencia +"MHz.";
@@ -45,7 +50,7 @@ public class RadioDigital {
     }//Fin clase Emisora
     
     
-    //Creamos dos variables privadas
+    //Atributos
     private final Emisora[] emisora;
     private int emisoraFavorita; //emisoraFavorita será por donde comenzará la RadioDigital al encenderse
     
@@ -81,6 +86,10 @@ public class RadioDigital {
         System.out.println("Emisora siguiente: "+emisora[emisoraSiguiente]);
     }//Fin mostrarEmisoras
 
+    /**
+     * Metodo subirFrecuencia, subira la frecuencia siempre que no sea mayor que 
+     * la longitud del array -1, en ese caso la emisoraFavorita volverá a 0.
+     */
     public void subirFrecuencia() {
         if (emisoraFavorita < emisora.length -1){
             emisoraFavorita++;
@@ -91,6 +100,10 @@ public class RadioDigital {
         mostrarEmisoras(); //Llamamos al metodo específico mostrarEmisoras()
     }//Fin subirFrecuencia
     
+    /**
+     * Metodo bajarFrecuencia, bajara la frecuencia siempre que sea mayor a 0,
+     * en ese caso la emisoraFavorita volverá a ser la longitud del array -1.
+     */
     public void bajarFrecuencia(){
         if (emisoraFavorita > 0){
             emisoraFavorita --;
